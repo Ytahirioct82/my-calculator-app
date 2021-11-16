@@ -269,11 +269,11 @@ class App extends React.Component {
         currentValue: "",
       });
     }
-    // prints the total of the division equation and saves it in previous value.
+    // prints the total of the division equation and rounds it to the nearest number.
     else if (this.state.operation === "/") {
       this.setState({
         equal: event.target.value,
-        displayValue: this.state.previousValue / this.state.userInput,
+        displayValue: Math.round(this.state.previousValue / this.state.userInput),
         previousValue: this.state.previousValue / this.state.userInput,
         currentValue: "",
       });
